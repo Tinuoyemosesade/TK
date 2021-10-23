@@ -1,6 +1,7 @@
 import React from "react";
 import { Element, scroller } from "react-scroll";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import BackgroundImg from "../../assets/pictures/company_team.jpg";
 import { Button } from "../../components/button";
@@ -51,14 +52,16 @@ export function TopSection(props) {
     <Element name="topSection">
       <TopContainer>
         <BackgroundFilter>
-          <Navbar />
+          <Navbar isHome="true"/>
           <Marginer direction="vertical" margin="8em" />
           <Logo />
           <Marginer direction="vertical" margin="4em" />
           <MotivationalText>Love cars? we do too.</MotivationalText>
           <MotivationalText>We can tell you how much your car is worth</MotivationalText>
           <Marginer direction="vertical" margin="2em" />
-          <Button>Input your car details</Button>
+          <Button>
+          <Link to="/upload">Input your car details</Link>
+          </Button>
           <DownArrowContainer onClick={scrollToNextSection}>
             <DownArrow />
           </DownArrowContainer>

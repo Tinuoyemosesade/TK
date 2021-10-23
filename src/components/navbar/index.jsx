@@ -37,11 +37,15 @@ export function Navbar(props) {
       <BrandContainer>
         <Logo inline />
       </BrandContainer>
-      <AccessibilityContainer>
-        <Button small>Get Started</Button>
-        <Marginer direction="horizontal" margin="8px" />
-        <LoginButton small>Login</LoginButton>
-      </AccessibilityContainer>
+      {props.isHome ? (
+        <div>
+        <AccessibilityContainer>
+          <Button small>Get Started</Button>
+          <Marginer direction="horizontal" margin="8px" />
+          <LoginButton small>Login</LoginButton>
+        </AccessibilityContainer>
+        </div>
+      ) : null}
     </NavbarContainer>
   );
 }
