@@ -28,6 +28,7 @@ const CardUploadPage  = () => {
       // // Details of the uploaded file
       // console.log(this.state.selectedFile);
 
+      
       // // Request made to the backend api
       // // Send formData object
       // axios.post("api/uploadfile", formData);
